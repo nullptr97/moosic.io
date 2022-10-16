@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5B6799528FC66C900E2753B /* MoosicIO.docc in Sources */ = {isa = PBXBuildFile; fileRef = F5B6799428FC66C900E2753B /* MoosicIO.docc */; };
+		F5B6799628FC66C900E2753B /* MoosicIO.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B6799328FC66C900E2753B /* MoosicIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5B679E628FC67B200E2753B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B6799D28FC67B200E2753B /* Constants.swift */; };
+		F5B679E728FC67B200E2753B /* ApiV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B6799E28FC67B200E2753B /* ApiV2.swift */; };
+		F5B679E828FC67B200E2753B /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679A028FC67B200E2753B /* MD5.swift */; };
+		F5B67A1328FC67B200E2753B /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679D028FC67B200E2753B /* Methods.swift */; };
+		F5B67A1428FC67B200E2753B /* VK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679D128FC67B200E2753B /* VK.swift */; };
+		F5B67A1528FC67B200E2753B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679D228FC67B200E2753B /* Request.swift */; };
+		F5B67A1628FC67B200E2753B /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679D428FC67B200E2753B /* Dependencies.swift */; };
+		F5B67A1728FC67B200E2753B /* Authorizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679D528FC67B200E2753B /* Authorizator.swift */; };
+		F5B67A1B28FC67B200E2753B /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679DA28FC67B200E2753B /* ApiRequest.swift */; };
+		F5B67A1C28FC67B200E2753B /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679DC28FC67B200E2753B /* ApiError.swift */; };
+		F5B67A1D28FC67B200E2753B /* ApiErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679DD28FC67B200E2753B /* ApiErrorHandler.swift */; };
+		F5B67A1E28FC67B200E2753B /* VKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679DE28FC67B200E2753B /* VKError.swift */; };
+		F5B67A2028FC67B200E2753B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679E228FC67B200E2753B /* Session.swift */; };
+		F5B67A2128FC67B200E2753B /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679E328FC67B200E2753B /* TokenStorage.swift */; };
+		F5B67A2228FC67B200E2753B /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679E428FC67B200E2753B /* SessionStorage.swift */; };
+		F5B67A2328FC67B200E2753B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B679E528FC67B200E2753B /* Token.swift */; };
+		F5B67A2628FC68D700E2753B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B67A2528FC68D700E2753B /* SwiftyJSON.swift */; };
+		F5B67A2828FC692400E2753B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B67A2728FC692400E2753B /* Extensions.swift */; };
+		F5B67A2A28FC6AA800E2753B /* MoosicIODelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B67A2928FC6AA800E2753B /* MoosicIODelegate.swift */; };
+		F5B67A2C28FC6B8D00E2753B /* RequestCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B67A2B28FC6B8D00E2753B /* RequestCallbacks.swift */; };
+		F5B67A2E28FC6C7800E2753B /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B67A2D28FC6C7800E2753B /* Atomic.swift */; };
+		F5B67A3028FC6E3300E2753B /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B67A2F28FC6E3300E2753B /* FileManager.swift */; };
+		F5B67A3228FC6ECF00E2753B /* ConnectionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B67A3128FC6ECF00E2753B /* ConnectionObserver.swift */; };
+		F5B67A3428FC6F3600E2753B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B67A3328FC6F3600E2753B /* Reachability.swift */; };
+		F5B67A3628FC6FAB00E2753B /* KeychainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B67A3528FC6FAB00E2753B /* KeychainProvider.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5B6799028FC66C900E2753B /* MoosicIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoosicIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B6799328FC66C900E2753B /* MoosicIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoosicIO.h; sourceTree = "<group>"; };
+		F5B6799428FC66C900E2753B /* MoosicIO.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MoosicIO.docc; sourceTree = "<group>"; };
+		F5B6799D28FC67B200E2753B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F5B6799E28FC67B200E2753B /* ApiV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiV2.swift; sourceTree = "<group>"; };
+		F5B679A028FC67B200E2753B /* MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
+		F5B679D028FC67B200E2753B /* Methods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Methods.swift; sourceTree = "<group>"; };
+		F5B679D128FC67B200E2753B /* VK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VK.swift; sourceTree = "<group>"; };
+		F5B679D228FC67B200E2753B /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		F5B679D428FC67B200E2753B /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		F5B679D528FC67B200E2753B /* Authorizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorizator.swift; sourceTree = "<group>"; };
+		F5B679DA28FC67B200E2753B /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		F5B679DC28FC67B200E2753B /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		F5B679DD28FC67B200E2753B /* ApiErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiErrorHandler.swift; sourceTree = "<group>"; };
+		F5B679DE28FC67B200E2753B /* VKError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKError.swift; sourceTree = "<group>"; };
+		F5B679E228FC67B200E2753B /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		F5B679E328FC67B200E2753B /* TokenStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
+		F5B679E428FC67B200E2753B /* SessionStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
+		F5B679E528FC67B200E2753B /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		F5B67A2528FC68D700E2753B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		F5B67A2728FC692400E2753B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F5B67A2928FC6AA800E2753B /* MoosicIODelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoosicIODelegate.swift; sourceTree = "<group>"; };
+		F5B67A2B28FC6B8D00E2753B /* RequestCallbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCallbacks.swift; sourceTree = "<group>"; };
+		F5B67A2D28FC6C7800E2753B /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		F5B67A2F28FC6E3300E2753B /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		F5B67A3128FC6ECF00E2753B /* ConnectionObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionObserver.swift; sourceTree = "<group>"; };
+		F5B67A3328FC6F3600E2753B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		F5B67A3528FC6FAB00E2753B /* KeychainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5B6798D28FC66C900E2753B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5B6798628FC66C900E2753B = {
+			isa = PBXGroup;
+			children = (
+				F5B6799228FC66C900E2753B /* MoosicIO */,
+				F5B6799128FC66C900E2753B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5B6799128FC66C900E2753B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5B6799028FC66C900E2753B /* MoosicIO.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5B6799228FC66C900E2753B /* MoosicIO */ = {
+			isa = PBXGroup;
+			children = (
+				F5B67A2428FC68CD00E2753B /* Support */,
+				F5B6799C28FC67B200E2753B /* Api */,
+				F5B6799328FC66C900E2753B /* MoosicIO.h */,
+				F5B6799428FC66C900E2753B /* MoosicIO.docc */,
+			);
+			path = MoosicIO;
+			sourceTree = "<group>";
+		};
+		F5B6799C28FC67B200E2753B /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				F5B6799D28FC67B200E2753B /* Constants.swift */,
+				F5B6799E28FC67B200E2753B /* ApiV2.swift */,
+				F5B6799F28FC67B200E2753B /* MD5 */,
+				F5B679D028FC67B200E2753B /* Methods.swift */,
+				F5B679D128FC67B200E2753B /* VK.swift */,
+				F5B679D228FC67B200E2753B /* Request.swift */,
+				F5B679D328FC67B200E2753B /* Authorizator */,
+				F5B679D728FC67B200E2753B /* ApiRequests */,
+				F5B679DB28FC67B200E2753B /* Errors */,
+				F5B679E128FC67B200E2753B /* Session */,
+				F5B67A2928FC6AA800E2753B /* MoosicIODelegate.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		F5B6799F28FC67B200E2753B /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				F5B679A028FC67B200E2753B /* MD5.swift */,
+			);
+			path = MD5;
+			sourceTree = "<group>";
+		};
+		F5B679D328FC67B200E2753B /* Authorizator */ = {
+			isa = PBXGroup;
+			children = (
+				F5B679D428FC67B200E2753B /* Dependencies.swift */,
+				F5B679D528FC67B200E2753B /* Authorizator.swift */,
+			);
+			path = Authorizator;
+			sourceTree = "<group>";
+		};
+		F5B679D728FC67B200E2753B /* ApiRequests */ = {
+			isa = PBXGroup;
+			children = (
+				F5B679DA28FC67B200E2753B /* ApiRequest.swift */,
+			);
+			path = ApiRequests;
+			sourceTree = "<group>";
+		};
+		F5B679DB28FC67B200E2753B /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				F5B679DC28FC67B200E2753B /* ApiError.swift */,
+				F5B679DD28FC67B200E2753B /* ApiErrorHandler.swift */,
+				F5B679DE28FC67B200E2753B /* VKError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		F5B679E128FC67B200E2753B /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				F5B679E228FC67B200E2753B /* Session.swift */,
+				F5B679E328FC67B200E2753B /* TokenStorage.swift */,
+				F5B679E428FC67B200E2753B /* SessionStorage.swift */,
+				F5B679E528FC67B200E2753B /* Token.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		F5B67A2428FC68CD00E2753B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F5B67A2528FC68D700E2753B /* SwiftyJSON.swift */,
+				F5B67A2728FC692400E2753B /* Extensions.swift */,
+				F5B67A2B28FC6B8D00E2753B /* RequestCallbacks.swift */,
+				F5B67A2D28FC6C7800E2753B /* Atomic.swift */,
+				F5B67A2F28FC6E3300E2753B /* FileManager.swift */,
+				F5B67A3128FC6ECF00E2753B /* ConnectionObserver.swift */,
+				F5B67A3328FC6F3600E2753B /* Reachability.swift */,
+				F5B67A3528FC6FAB00E2753B /* KeychainProvider.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F5B6798B28FC66C900E2753B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B6799628FC66C900E2753B /* MoosicIO.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F5B6798F28FC66C900E2753B /* MoosicIO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B6799928FC66C900E2753B /* Build configuration list for PBXNativeTarget "MoosicIO" */;
+			buildPhases = (
+				F5B6798B28FC66C900E2753B /* Headers */,
+				F5B6798C28FC66C900E2753B /* Sources */,
+				F5B6798D28FC66C900E2753B /* Frameworks */,
+				F5B6798E28FC66C900E2753B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoosicIO;
+			productName = MoosicIO;
+			productReference = F5B6799028FC66C900E2753B /* MoosicIO.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5B6798728FC66C900E2753B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					F5B6798F28FC66C900E2753B = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = F5B6798A28FC66C900E2753B /* Build configuration list for PBXProject "MoosicIO" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5B6798628FC66C900E2753B;
+			productRefGroup = F5B6799128FC66C900E2753B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5B6798F28FC66C900E2753B /* MoosicIO */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5B6798E28FC66C900E2753B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5B6798C28FC66C900E2753B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B67A2328FC67B200E2753B /* Token.swift in Sources */,
+				F5B67A2128FC67B200E2753B /* TokenStorage.swift in Sources */,
+				F5B6799528FC66C900E2753B /* MoosicIO.docc in Sources */,
+				F5B67A3228FC6ECF00E2753B /* ConnectionObserver.swift in Sources */,
+				F5B67A1728FC67B200E2753B /* Authorizator.swift in Sources */,
+				F5B67A1628FC67B200E2753B /* Dependencies.swift in Sources */,
+				F5B67A1D28FC67B200E2753B /* ApiErrorHandler.swift in Sources */,
+				F5B67A2A28FC6AA800E2753B /* MoosicIODelegate.swift in Sources */,
+				F5B67A1328FC67B200E2753B /* Methods.swift in Sources */,
+				F5B67A2828FC692400E2753B /* Extensions.swift in Sources */,
+				F5B67A3028FC6E3300E2753B /* FileManager.swift in Sources */,
+				F5B67A1C28FC67B200E2753B /* ApiError.swift in Sources */,
+				F5B67A3628FC6FAB00E2753B /* KeychainProvider.swift in Sources */,
+				F5B67A2E28FC6C7800E2753B /* Atomic.swift in Sources */,
+				F5B67A1428FC67B200E2753B /* VK.swift in Sources */,
+				F5B67A2228FC67B200E2753B /* SessionStorage.swift in Sources */,
+				F5B67A2028FC67B200E2753B /* Session.swift in Sources */,
+				F5B67A1528FC67B200E2753B /* Request.swift in Sources */,
+				F5B67A1E28FC67B200E2753B /* VKError.swift in Sources */,
+				F5B679E628FC67B200E2753B /* Constants.swift in Sources */,
+				F5B67A2C28FC6B8D00E2753B /* RequestCallbacks.swift in Sources */,
+				F5B679E828FC67B200E2753B /* MD5.swift in Sources */,
+				F5B67A2628FC68D700E2753B /* SwiftyJSON.swift in Sources */,
+				F5B679E728FC67B200E2753B /* ApiV2.swift in Sources */,
+				F5B67A3428FC6F3600E2753B /* Reachability.swift in Sources */,
+				F5B67A1B28FC67B200E2753B /* ApiRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F5B6799728FC66C900E2753B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F5B6799828FC66C900E2753B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F5B6799A28FC66C900E2753B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4WA7QF6LCE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.nullteam.MoosicIO;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5B6799B28FC66C900E2753B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4WA7QF6LCE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.nullteam.MoosicIO;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5B6798A28FC66C900E2753B /* Build configuration list for PBXProject "MoosicIO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B6799728FC66C900E2753B /* Debug */,
+				F5B6799828FC66C900E2753B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5B6799928FC66C900E2753B /* Build configuration list for PBXNativeTarget "MoosicIO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B6799A28FC66C900E2753B /* Debug */,
+				F5B6799B28FC66C900E2753B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5B6798728FC66C900E2753B /* Project object */;
+}
