@@ -1,13 +1,13 @@
 import Foundation
 
 /// MoosicIO entry point
-public final class VK {
-    public static func setUp(appId: String, delegate: MoosicIODelegate, bundleName: String? = nil, configPath: String? = nil) {
+public final class MoosicIO {
+    public static func setup(delegate: MoosicIODelegate, bundleName: String? = nil, configPath: String? = nil) {
         guard dependencies == nil else {
             return
         }
 
-        dependencies = dependenciesType.init(appId: appId, delegate: delegate, bundleName: bundleName, configPath: configPath)
+        dependencies = dependenciesType.init(delegate: delegate, bundleName: bundleName, configPath: configPath)
     }
     
     /// Returns MoosicIO user sessions

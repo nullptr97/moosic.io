@@ -28,7 +28,6 @@ final class AuthorizatorImpl: Authorizator {
     private let queue = DispatchQueue(label: "MoosicIO.authorizatorQueue")
     private let directAuthUrl: String = "https://oauth.vk.com/token?"
     
-    private let appId: String
     private var tokenStorage: TokenStorage
     private weak var tokenMaker: TokenMaker?
     private weak var delegate: MoosicIOAuthorizatorDelegate?
@@ -36,8 +35,7 @@ final class AuthorizatorImpl: Authorizator {
     private(set) var vkAppToken: InvalidatableToken?
     private var requestTimeout: TimeInterval = 10
     
-    init(appId: String, delegate: MoosicIOAuthorizatorDelegate?, tokenStorage: TokenStorage, tokenMaker: TokenMaker) {
-        self.appId = appId
+    init(delegate: MoosicIOAuthorizatorDelegate?, tokenStorage: TokenStorage, tokenMaker: TokenMaker) {
         self.delegate = delegate
         self.tokenStorage = tokenStorage
         self.tokenMaker = tokenMaker

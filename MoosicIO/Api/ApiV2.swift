@@ -25,7 +25,7 @@ open class NMURLSession: NSObject {
     static var authorizedSession: URLSession {
         let config = URLSessionConfiguration.default
         
-        guard let token = VK.sessions.default.accessToken?.accessToken else {
+        guard let token = MoosicIO.sessions.default.accessToken?.accessToken else {
             return URLSession.shared
         }
         

@@ -14,12 +14,12 @@ protocol Dependencies:
     SessionMaker { }
 
 protocol DependenciesHolder: SessionsHolderHolder, AuthorizatorHolder {
-    init(appId: String, delegate: MoosicIODelegate?, bundleName: String?, configPath: String?)
+    init(delegate: MoosicIODelegate?, bundleName: String?, configPath: String?)
 }
 
 extension DependenciesHolder {
-    init(appId: String, delegate: MoosicIODelegate?) {
-        self.init(appId: appId, delegate: delegate, bundleName: nil, configPath: nil)
+    init(delegate: MoosicIODelegate?) {
+        self.init(delegate: delegate, bundleName: nil, configPath: nil)
     }
 }
 
@@ -34,7 +34,6 @@ protocol AuthorizatorHolder: AnyObject {
 typealias VKStoryboard = UIStoryboard
 
 final class DependenciesImpl: Dependencies {
-    private let appId: String
     private weak var delegate: MoosicIODelegate?
     private let customBundleName: String?
     private let customConfigPath: String?
@@ -58,8 +57,7 @@ final class DependenciesImpl: Dependencies {
         )
     }()
     
-    init(appId: String, delegate: MoosicIODelegate?, bundleName: String?, configPath: String?) {
-        self.appId = appId
+    init(delegate: MoosicIODelegate?, bundleName: String?, configPath: String?) {
         self.delegate = delegate
         self.customBundleName = bundleName
         self.customConfigPath = configPath
@@ -106,7 +104,7 @@ final class DependenciesImpl: Dependencies {
     private lazy var sharedAuthorizator: Authorizator = {
         let tokenStorage = TokenStorageImpl(serviceKey: bundleName + "_Token")
         
-        return AuthorizatorImpl(appId: appId, delegate: delegate, tokenStorage: tokenStorage, tokenMaker: self)
+        return AuthorizatorImpl(delegate: delegate, tokenStorage: tokenStorage, tokenMaker: self)
     }()
     
     func token(accessToken: String, silentToken: String, silentTokenUuid: String, silentTokenTtl: String, trustedHash: String) -> InvalidatableToken {

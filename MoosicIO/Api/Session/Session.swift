@@ -51,12 +51,12 @@ public protocol Session: AnyObject {
     /// Returns info about logged user.
     /// - parameter onError: clousure which will be executed when logging failed.
     /// Returns cause of failure.
-    func logIn(login: String, password: String) async throws
-    func logIn(login: String, password: String, captchaSid: String?, captchaKey: String?) async throws
-    func logIn(login: String, password: String, code: Int?, forceSms: Int) async throws
+    func login(login: String, password: String) async throws
+    func login(login: String, password: String, captchaSid: String?, captchaKey: String?) async throws
+    func login(login: String, password: String, code: Int?, forceSms: Int) async throws
     /// Log out user, remove all data and destroy current session
-    func logOut(_ block: @escaping () -> (Void))
-    func logOut()
+    func logout(_ block: @escaping () -> (Void))
+    func logout()
     
     func throwIfDeactivated() throws
     func throwIfInvalidateSession() throws
@@ -103,30 +103,30 @@ public final class SessionImpl: Session, DestroyableSession, ApiErrorExecutor {
         self.apiErrorHandler = ApiErrorHandlerImpl(executor: self)
     }
     
-    public func logIn(login: String, password: String) async throws {
+    public func login(login: String, password: String) async throws {
         let token = try await authorizator.authorize(login: login, password: password, sessionId: id, revoke: true)
         delegate?.tokenCreated(for: id, token: token.accessToken)
         self.token = token
     }
     
-    public func logIn(login: String, password: String, captchaSid: String?, captchaKey: String?) async throws {
+    public func login(login: String, password: String, captchaSid: String?, captchaKey: String?) async throws {
         let token = try await authorizator.authorize(login: login, password: password, sessionId: id, revoke: true, captchaSid: captchaSid, captchaKey: captchaKey)
         delegate?.tokenCreated(for: id, token: token.accessToken)
         self.token = token
     }
 
-    public func logIn(login: String, password: String, code: Int?, forceSms: Int = 0) async throws {
+    public func login(login: String, password: String, code: Int?, forceSms: Int = 0) async throws {
         let token = try await authorizator.authorize(login: login, password: password, sessionId: id, revoke: true, code: code, forceSms: forceSms)
         delegate?.tokenCreated(for: id, token: token.accessToken)
         self.token = token
     }
     
-    public func logOut(_ block: @escaping () -> (Void)) {
+    public func logout(_ block: @escaping () -> (Void)) {
         delegate?.tokenRemoved(for: id)
         destroy(block)
     }
     
-    public func logOut() {
+    public func logout() {
         delegate?.tokenRemoved(for: id)
         destroy()
     }
@@ -139,7 +139,7 @@ public final class SessionImpl: Session, DestroyableSession, ApiErrorExecutor {
     
     public func throwIfDeactivated() throws {
         guard state > .authorized else {
-            VK.sessions.default.logOut()
+            MoosicIO.sessions.default.logOut()
             throw VKError.userDeactivated(reason: "User deactivated")
         }
     }
@@ -157,7 +157,7 @@ public final class SessionImpl: Session, DestroyableSession, ApiErrorExecutor {
     }
     
     public func throwIfInvalidateSession() throws {
-        VK.sessions.default.logOut()
+        MoosicIO.sessions.default.logOut()
         throw VKError.authorizationFailed
     }
     
