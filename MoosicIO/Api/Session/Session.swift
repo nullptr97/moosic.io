@@ -104,15 +104,21 @@ public final class SessionImpl: Session, DestroyableSession, ApiErrorExecutor {
     }
     
     public func logIn(login: String, password: String) async throws {
-        token = try await authorizator.authorize(login: login, password: password, sessionId: id, revoke: true)
+        let token = try await authorizator.authorize(login: login, password: password, sessionId: id, revoke: true)
+        delegate?.tokenCreated(for: id, token: token.accessToken)
+        self.token = token
     }
     
     public func logIn(login: String, password: String, captchaSid: String?, captchaKey: String?) async throws {
-        token = try await authorizator.authorize(login: login, password: password, sessionId: id, revoke: true, captchaSid: captchaSid, captchaKey: captchaKey)
+        let token = try await authorizator.authorize(login: login, password: password, sessionId: id, revoke: true, captchaSid: captchaSid, captchaKey: captchaKey)
+        delegate?.tokenCreated(for: id, token: token.accessToken)
+        self.token = token
     }
 
     public func logIn(login: String, password: String, code: Int?, forceSms: Int = 0) async throws {
-        token = try await authorizator.authorize(login: login, password: password, sessionId: id, revoke: true, code: code, forceSms: forceSms)
+        let token = try await authorizator.authorize(login: login, password: password, sessionId: id, revoke: true, code: code, forceSms: forceSms)
+        delegate?.tokenCreated(for: id, token: token.accessToken)
+        self.token = token
     }
     
     public func logOut(_ block: @escaping () -> (Void)) {

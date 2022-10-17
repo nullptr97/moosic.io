@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
@@ -55,7 +55,7 @@ final class AuthorizatorImpl: Authorizator {
         return try await authorize(login: login, password: password, sessionId: sessionId, captchaSid: captchaSid, captchaKey: captchaKey)
     }
 
-    func authorize(login: String, password: String, sessionId: String, revoke: Bool, code: Int?, forceSms: Int = 0) async throws -> InvalidatableToken {
+    func authorize(login: String, password: String, sessionId: String, revoke: Bool, code: Int?, forceSms: Int = 1) async throws -> InvalidatableToken {
         defer { vkAppToken = nil }
         
         return try await authorize(login: login, password: password, sessionId: sessionId, code: code, forceSms: forceSms)

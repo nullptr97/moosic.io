@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F5B6799528FC66C900E2753B /* MoosicIO.docc in Sources */ = {isa = PBXBuildFile; fileRef = F5B6799428FC66C900E2753B /* MoosicIO.docc */; };
 		F5B6799628FC66C900E2753B /* MoosicIO.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B6799328FC66C900E2753B /* MoosicIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5B679E628FC67B200E2753B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B6799D28FC67B200E2753B /* Constants.swift */; };
 		F5B679E728FC67B200E2753B /* ApiV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B6799E28FC67B200E2753B /* ApiV2.swift */; };
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		F5B6799028FC66C900E2753B /* MoosicIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoosicIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B6799328FC66C900E2753B /* MoosicIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoosicIO.h; sourceTree = "<group>"; };
-		F5B6799428FC66C900E2753B /* MoosicIO.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MoosicIO.docc; sourceTree = "<group>"; };
 		F5B6799D28FC67B200E2753B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F5B6799E28FC67B200E2753B /* ApiV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiV2.swift; sourceTree = "<group>"; };
 		F5B679A028FC67B200E2753B /* MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 				F5B67A2428FC68CD00E2753B /* Support */,
 				F5B6799C28FC67B200E2753B /* Api */,
 				F5B6799328FC66C900E2753B /* MoosicIO.h */,
-				F5B6799428FC66C900E2753B /* MoosicIO.docc */,
 			);
 			path = MoosicIO;
 			sourceTree = "<group>";
@@ -265,7 +262,6 @@
 			files = (
 				F5B67A2328FC67B200E2753B /* Token.swift in Sources */,
 				F5B67A2128FC67B200E2753B /* TokenStorage.swift in Sources */,
-				F5B6799528FC66C900E2753B /* MoosicIO.docc in Sources */,
 				F5B67A3228FC6ECF00E2753B /* ConnectionObserver.swift in Sources */,
 				F5B67A1728FC67B200E2753B /* Authorizator.swift in Sources */,
 				F5B67A1628FC67B200E2753B /* Dependencies.swift in Sources */,
